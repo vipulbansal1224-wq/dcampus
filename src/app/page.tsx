@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import ImageSlider from "@/components/ImageSlider";
 
@@ -174,7 +174,7 @@ export default function Home() {
               <div key={i} className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center text-center hover:shadow-xl transition-shadow relative">
                 <div className="text-4xl text-[#ff6b00] opacity-20 absolute top-4 left-4">"</div>
                 <div className="w-24 h-24 relative rounded-full overflow-hidden border-2 border-[#182B45] mb-6">
-                  <Image src={\/\\} alt={t.name} fill className="object-cover" />
+                  <Image src={`/${t.img}`} alt={t.name} fill className="object-cover" />
                 </div>
                 <p className="text-slate-600 text-sm italic mb-6 leading-relaxed flex-grow">"{t.desc}"</p>
                 <h4 className="font-bold text-[#182B45] border-t-2 border-[#ff6b00] pt-4 w-1/2 mx-auto">{t.name}</h4>
