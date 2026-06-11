@@ -1,6 +1,21 @@
 ﻿import Image from "next/image";
 
 export default function EventsPage() {
+  const galleryImages = [
+    "/DSC_0271_12_11zon.jpg",
+    "/DSC_0190_13_11zon.jpg",
+    "/DSC_0254_15_11zon.jpg",
+    "/DSC_0256_9_11zon.jpg",
+    "/DSC_0258_11_11zon.jpg",
+    "/DSC_0244_4_11zon-scaled.jpg",
+    "/DSC_0235_14_11zon.jpg",
+    "/DSC_0257_10_11zon.jpg",
+    "/DSC_0255_16_11zon.jpg",
+    "/DSC_2047_5_11zon-scaled.jpg",
+    "/DSC_0272_13_11zon.jpg",
+    "/DSC_1987_4_11zon-scaled.jpg"
+  ];
+
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Hero Banner */}
@@ -19,6 +34,23 @@ export default function EventsPage() {
           <p className="text-slate-700 leading-relaxed text-lg">
             Cultural activities are sports or activities which contribute to or enhance the historical or social development, appreciation of members of the public. It is training and refinement of the intellect, interest, tastes and skills of a person. At Dawn Computer Campus, we believe in the holistic development of our students by regularly organizing such events.
           </p>
+        </div>
+
+        {/* Event Gallery */}
+        <div className="bg-white p-8 md:p-12 shadow rounded-lg">
+          <h2 className="text-3xl font-bold text-[#182B45] mb-8 text-center">Event Gallery</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {galleryImages.map((src, index) => (
+              <div key={index} className="relative h-48 md:h-64 rounded-lg overflow-hidden group shadow-sm hover:shadow-md transition-all">
+                <Image 
+                  src={src} 
+                  alt={"Event Image } 
+                  fill 
+                  className="object-cover group-hover:scale-105 transition-transform duration-300" 
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Vision, Mission, Commitments */}
