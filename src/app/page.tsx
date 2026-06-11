@@ -3,115 +3,81 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-800 font-sans selection:bg-blue-200">
+    <main className="min-h-screen bg-white text-slate-800 font-sans">
+      
       {/* Top Header Contact Bar */}
-      <div className="w-full bg-blue-900 text-white/90 py-2 text-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+      <div className="w-full bg-[#182B45] text-white py-2 text-sm">
+        <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <span>?? +91 0000000000</span>
+            <span>?? 621543</span>
             <span className="hidden sm:inline">?? info@dccampus.com</span>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="https://www.facebook.com/rahul.ketan?mibextid=ZbWKwL" className="hover:text-white">Facebook</Link>
-            <Link href="https://www.instagram.com/dcc_gopal/" className="hover:text-white">Instagram</Link>
+            <Link href="https://www.facebook.com/rahul.ketan?mibextid=ZbWKwL" className="hover:text-blue-300">Facebook</Link>
+            <Link href="https://www.instagram.com/dcc_gopal/" className="hover:text-pink-300">Instagram</Link>
           </div>
         </div>
       </div>
 
       {/* Navigation */}
       <nav className="w-full bg-white shadow-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            <div className="flex items-center gap-3">
-              {/* Fallback Logo */}
-              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-2xl text-white">DC</div>
-              <div className="flex flex-col">
-                <span className="font-bold text-2xl tracking-tight text-blue-900 leading-none">Dawn Computer Campus</span>
-                <span className="text-xs font-semibold text-slate-500 mt-1">An ISO 9001:2015 Certified Organization</span>
-              </div>
-            </div>
-            <div className="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-600">
-              <Link href="#" className="text-blue-600">Home</Link>
-              <Link href="#courses" className="hover:text-blue-600 transition-colors">Courses</Link>
-              <Link href="#verify" className="hover:text-blue-600 transition-colors">Certificate Verification</Link>
-              <Link href="#events" className="hover:text-blue-600 transition-colors">Events</Link>
-              <Link href="#news" className="hover:text-blue-600 transition-colors">Newsroom</Link>
-              <Link href="#contact" className="px-5 py-2 bg-blue-600 hover:bg-blue-700 rounded text-white transition-colors">Contact Us</Link>
-            </div>
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-24">
+          <div className="flex items-center gap-3">
+            <Image src="/logo-scaled-102x77.jpg" alt="DCC Logo" width={102} height={77} className="object-contain" />
+          </div>
+          <div className="hidden lg:flex items-center gap-6 text-[15px] font-semibold text-slate-700">
+            <Link href="#" className="text-[#ff6b00]">Home</Link>
+            <Link href="#" className="hover:text-[#ff6b00] transition-colors">Courses</Link>
+            <Link href="#" className="hover:text-[#ff6b00] transition-colors">Certificate Verification</Link>
+            <Link href="#" className="hover:text-[#ff6b00] transition-colors">Events</Link>
+            <Link href="#" className="hover:text-[#ff6b00] transition-colors">Birthday's</Link>
+            <Link href="#" className="hover:text-[#ff6b00] transition-colors">Student of the Week</Link>
+            <Link href="#" className="hover:text-[#ff6b00] transition-colors">Newsroom</Link>
+            <Link href="#" className="hover:text-[#ff6b00] transition-colors">Today's Special</Link>
+            <Link href="#" className="hover:text-[#ff6b00] transition-colors">Contact</Link>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative bg-white border-b border-slate-200 pt-16 pb-20 lg:pt-24 lg:pb-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block py-1 px-3 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-sm font-semibold mb-6">
-            Admissions Open 2026
-          </span>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">
-            Welcome To <span className="text-blue-600">Dawn Computer Campus</span>
-          </h1>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-            DAWN refers to a period of early morning which represents a new beginning and a fresh approach to everyday life. We are here to change the orthodox trend of computer education.
-            <br/><br/>
-            <strong>Our motto is to "make you learn, so that help you to earn"</strong>
+      <section className="relative w-full h-[500px] bg-slate-100 flex items-center justify-center overflow-hidden">
+        <Image src="/comp-1-1024x768.jpeg" alt="Banner" fill className="object-cover opacity-20" />
+        <div className="relative z-10 text-center px-4">
+          <h1 className="text-4xl md:text-6xl font-bold text-[#182B45] mb-4">Welcome To Dawn Computer Campus</h1>
+          <Image src="/divider-icon-2-300x86.png" alt="Divider" width={300} height={86} className="mx-auto mb-6" />
+          <p className="text-lg text-slate-700 max-w-2xl mx-auto font-medium">
+            An ISO 9001:2015 Certified Organization & Registered under Ministry of MSME, Govt. of India.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="#courses" className="w-full sm:w-auto px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded font-bold transition-all shadow-md">
-              View Our Courses
-            </Link>
-            <Link href="#verify" className="w-full sm:w-auto px-8 py-3.5 bg-white hover:bg-slate-50 border-2 border-slate-200 text-slate-700 rounded font-bold transition-all shadow-sm">
-              Verify Certificate
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* Why Choose Us / Facilities */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Our Facilities & Features</h2>
-            <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+      {/* About Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-[#182B45] mb-6">Dawn Computer Campus</h2>
+          <p className="text-slate-600 leading-relaxed max-w-4xl mx-auto">
+            Dawn Computer Campus or DCC, is a concept which is purely based upon a quality generation approach "DAWN" which refers to a period of early morning which represent a new beginning and a fresh approach to everyday life. We are here to change the orthodox trend of computer education. After analyzing various aspects of this field and properly understanding the expectations associated with computer education, we are here to serve the community. The approach of DAWN is based upon quality generation not on quantity... our motto is to "make you learn, so that help you to earn".
+          </p>
+        </div>
+      </section>
+
+      {/* Facilities / Features */}
+      <section className="py-16 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-[#182B45] mb-2">Our Facilities</h2>
+            <Image src="/divider-icon-2-300x86.png" alt="Divider" width={200} height={57} className="mx-auto" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { title: "7+ Specialist Faculties", desc: "We have experienced specialist faculties for your respective courses.", icon: "?????" },
-              { title: "24x7 CCTV Monitoring", desc: "We always monitor all your activity through CCTV 24 x 7 for safety.", icon: "??" },
-              { title: "Personalized Classes", desc: "We provide classes according to students abilities and performance.", icon: "??" }
+              { img: "/c-1.png", text: "We provide you the gateway to verify your certificate online." },
+              { img: "/c-2.png", text: "We have 7+ Specialist Faculties for your respective courses." },
+              { img: "/c-3.png", text: "We always monitor all your activity through CCTV 24 x 7." },
+              { img: "/c-4.png", text: "We provide classes according to students abilities and performance." }
             ].map((f, i) => (
-              <div key={i} className="p-8 rounded-xl bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow text-center">
-                <div className="text-4xl mb-4">{f.icon}</div>
-                <h3 className="text-xl font-bold mb-3 text-slate-800">{f.title}</h3>
-                <p className="text-slate-600">{f.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Courses Section */}
-      <section id="courses" className="py-20 bg-white border-y border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Career Development Courses</h2>
-            <div className="w-20 h-1 bg-blue-600 mx-auto mb-4"></div>
-            <p className="text-slate-600">Find your Career Development Course Here</p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: "DCA", desc: "Diploma in Computer Applications (120 Hrs)", bg: "bg-blue-50", text: "text-blue-700" },
-              { title: "BCA", desc: "Bachelor of Computer Applications", bg: "bg-indigo-50", text: "text-indigo-700" },
-              { title: "Tally Prime", desc: "Professional Accounting & GST (150 Hrs)", bg: "bg-emerald-50", text: "text-emerald-700" },
-              { title: "Photoshop", desc: "Graphic Design & Editing - 3 Month", bg: "bg-rose-50", text: "text-rose-700" }
-            ].map((course, i) => (
-              <div key={i} className="p-6 rounded-xl bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                <div className="w-14 h-14 rounded-lg flex items-center justify-center text-2xl font-bold mb-6  ">
-                  {course.title[0]}
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-slate-900">{course.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{course.desc}</p>
+              <div key={i} className="text-center p-6 bg-white shadow-sm border border-slate-100">
+                <Image src={f.img} alt="Icon" width={64} height={64} className="mx-auto mb-4" />
+                <p className="text-slate-600 font-medium">{f.text}</p>
               </div>
             ))}
           </div>
@@ -119,112 +85,118 @@ export default function Home() {
       </section>
 
       {/* Administration */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Administration</h2>
-            <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-[#182B45] mb-2">Administration</h2>
+            <Image src="/divider-icon-2-300x86.png" alt="Divider" width={200} height={57} className="mx-auto" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div className="space-y-16">
+            {/* Director */}
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="w-64 shrink-0">
+                <Image src="/Gopal-Ji-Director.jpeg" alt="Gopal Ji" width={256} height={256} className="rounded-lg shadow-md" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-[#ff6b00] mb-2">Mr. Gopal Kumar - Director</h3>
+                <p className="text-slate-600 leading-relaxed italic">
+                  "By the Grace of GOD & my Supporters, I have come a long way in computer education field. Our journey began way back in the year 2008, from then and till now As a Director I didn't want to invest our precious time in advertising, I always try to improve our teaching techniques to educate every student efficiently. I am very proud to say that here we never give false hope to students, we only give the right way of education so that every student can make their future in digital era."
+                </p>
+              </div>
+            </div>
+
+            {/* Chairman */}
+            <div className="flex flex-col md:flex-row-reverse items-center gap-8 bg-slate-50 p-8 rounded-lg">
+              <div className="w-56 shrink-0">
+                <Image src="/Parveen-Verma-director-230x300.jpeg" alt="Parveen Verma" width={230} height={300} className="rounded-lg shadow-md" />
+              </div>
+              <div className="text-right">
+                <h3 className="text-xl font-bold text-[#ff6b00] mb-2">Mr. Parveen Verma - Chairman</h3>
+                <p className="text-slate-600 leading-relaxed italic">
+                  "I am very much grateful to the fellow teachers and support staffs of Ideal on this way of journey. Being a leading institute for computer classes at our side, we offer the best training environment and flexible training schedule to the students at an affordable course fee. Our course fee is so pocket-friendly that anyone can afford it."
+                </p>
+              </div>
+            </div>
+
+            {/* MD & HOD */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div className="flex flex-col items-center text-center">
+                <Image src="/Parmod-verma-Director.jpeg" alt="Parmod Verma" width={200} height={200} className="rounded-full shadow-md mb-4" />
+                <h3 className="text-lg font-bold text-[#ff6b00]">Mr. Parmod Verma</h3>
+                <p className="text-[#182B45] font-semibold mb-2">Managing Director</p>
+                <p className="text-slate-600 italic text-sm">"We can proudly say that we provide the best computer courses and training techniques at our side at the most affordable prices and make the future of students bright."</p>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <Image src="/Miss-Jaspreet-Kaur-Instructor-cum-HOD.jpeg" alt="Jaspreet Kaur" width={200} height={200} className="rounded-full shadow-md mb-4" />
+                <h3 className="text-lg font-bold text-[#ff6b00]">Miss Jaspreet Kaur</h3>
+                <p className="text-[#182B45] font-semibold mb-2">Instructor Cum HOD</p>
+                <p className="text-slate-600 italic text-sm">"Our Computer Centre not only imparts training to students but guide them to step into a world of technology... It is my moral duty to guide the students from the beginning till the end."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-[#182B45] mb-2">Student Testimonials</h2>
+            <Image src="/divider-icon-2-300x86.png" alt="Divider" width={200} height={57} className="mx-auto" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { role: "Director", name: "Mr. Gopal Kumar", msg: "Our journey began way back in the year 2008... we only give the right way of education so that every student can make their future in digital era." },
-              { role: "Chairman", name: "Mr. Parveen Verma", msg: "We offer the best training environment and flexible training schedule to the students at an affordable course fee." },
-              { role: "Managing Director", name: "Mr. Parmod Verma", msg: "We can proudly say that we provide the best computer courses and training techniques at the most affordable prices." },
-              { role: "HOD", name: "Miss Jaspreet Kaur", msg: "It is my moral duty to guide the students from the beginning till the end of the course. Also, escort them through any difficulty." },
-              { role: "Examination Controller", name: "Mrs. Pawanpreet Kaur", msg: "Ensuring rigorous standards and seamless examination processes for all courses." }
-            ].map((admin, i) => (
-              <div key={i} className="p-8 rounded-xl bg-white shadow-sm border border-slate-200 text-center">
-                <div className="w-20 h-20 bg-slate-100 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl text-slate-400 font-bold">
-                  {admin.name[4]}
-                </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-1">{admin.name}</h3>
-                <p className="text-blue-600 text-sm font-bold mb-4 uppercase">{admin.role}</p>
-                <p className="text-slate-600 text-sm italic leading-relaxed">"{admin.msg}"</p>
+              { img: "/ankita.jpeg", name: "Ankita", text: "DCC teacher's guidance is very awesome. They try to solve every question with love and dedication. The environment of DCC is very friendly." },
+              { img: "/yamini.jpeg", name: "Yamini", text: "Teaching staff in dcc is very nice and cooperative..trips and functions are also arranged here. Fee structure is also genuine." },
+              { img: "/palak.jpeg", name: "Palak", text: "I am thoroughly enjoying doing the course at DCC Computer Centre! Because his method of teaching is very good and he explains very well." },
+              { img: "/mansi.jpeg", name: "Mansi", text: "I'm very lucky to have a teacher like you. You guys are on the ladder of success. I liked the way you teach Students." }
+            ].map((t, i) => (
+              <div key={i} className="bg-white p-6 shadow border border-slate-100 text-center flex flex-col items-center">
+                <Image src={t.img} alt={t.name} width={100} height={100} className="rounded-full border-4 border-slate-100 shadow-sm mb-4" />
+                <p className="text-slate-600 italic text-sm mb-4 flex-1">"{t.text}"</p>
+                <h4 className="font-bold text-[#182B45]">- {t.name}</h4>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-white border-y border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Student Testimonials</h2>
-            <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+      {/* Gallery preview */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-[#182B45] mb-2">Our Gallery</h2>
+            <Image src="/divider-icon-2-300x86.png" alt="Divider" width={200} height={57} className="mx-auto" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-xl bg-slate-50 border border-slate-100">
-              <p className="text-slate-700 italic mb-6 leading-relaxed">"DCC teacher's guidance is very awesome. They try to solve every question with love and dedication. The environment is very friendly and full of love and discipline."</p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center font-bold text-blue-700">S</div>
-                <div>
-                  <p className="text-slate-900 font-bold">Student</p>
-                  <p className="text-slate-500 text-sm">DCC Campus</p>
-                </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[/comp-1-1024x768.jpeg, /comp-2-1024x768.jpeg, /comp-3-1024x768.jpeg, /comp-4-1024x768.jpeg].map((src, i) => (
+              <div key={i} className="relative h-48 rounded overflow-hidden shadow-sm">
+                <Image src={src} alt="Gallery" fill className="object-cover hover:scale-110 transition-transform duration-500" />
               </div>
-            </div>
-            <div className="p-8 rounded-xl bg-slate-50 border border-slate-100">
-              <p className="text-slate-700 italic mb-6 leading-relaxed">"Teaching staff in dcc is very nice and cooperative..trips and functions are also arranged here. Fee structure is also genuine as compared to other institutes."</p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center font-bold text-indigo-700">A</div>
-                <div>
-                  <p className="text-slate-900 font-bold">Alumni</p>
-                  <p className="text-slate-500 text-sm">DCC Campus</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
-        </div>
-      </section>
-
-      {/* Verify Certificate */}
-      <section id="verify" className="py-20 bg-blue-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Verify Your Certificate Online</h2>
-          <p className="text-blue-100 mb-8">We provide you the gateway to verify your certificate online. Enter your certification code.</p>
-          
-          <form className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
-            <input type="text" placeholder="e.g., DDC/2K2/456789" className="flex-1 px-5 py-3.5 rounded bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-300" />
-            <button type="button" className="px-8 py-3.5 bg-slate-900 hover:bg-slate-800 text-white rounded font-bold transition-colors shadow-lg">
-              Verify
-            </button>
-          </form>
         </div>
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="py-16 bg-slate-900 text-slate-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-            <div>
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">?? Head Office</h3>
-              <p className="text-sm leading-relaxed">
-                Office Number 3, Opp. Gurdwara Sahib, <br/>
-                Near Govt Primary School, <br/>
-                Bhamian Road, Ludhiana
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">?? Campus 2</h3>
-              <p className="text-sm leading-relaxed">
-                Near Mehandi Palace, <br/>
-                Opp. St. Marry Convent School, <br/>
-                Tajpur Road, Ludhiana
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">?? Branch Office</h3>
-              <p className="text-sm leading-relaxed">
-                Office Number 10, <br/>
-                Sukhmani Tower, <br/>
-                Kochar Market, Ludhiana
-              </p>
-            </div>
+      <footer className="bg-[#182B45] text-slate-300 py-12">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <h3 className="text-lg font-bold text-white mb-4">Head Office</h3>
+            <p className="text-sm">Office Number 3, Opp. Gurdwara Sahib,<br/>Near Govt Primary School, Bhamian Road, Ludhiana</p>
           </div>
-          <div className="pt-8 border-t border-slate-800 text-center text-sm">
-            <p>&copy; 2026 Dawn Computer Campus. An ISO 9001:2015 Certified Organization. All rights reserved.</p>
+          <div>
+            <h3 className="text-lg font-bold text-white mb-4">Campus 2</h3>
+            <p className="text-sm">Near Mehandi Palace, Opp. St. Marry Convent School,<br/>Tajpur Road, Ludhiana</p>
           </div>
+          <div>
+            <h3 className="text-lg font-bold text-white mb-4">Branch Office</h3>
+            <p className="text-sm">Office Number 10, Sukhmani Tower,<br/>Kochar Market, Ludhiana</p>
+          </div>
+        </div>
+        <div className="text-center text-sm border-t border-slate-700 pt-6">
+          <p>Copyright © 2026 Dawn Computer Campus</p>
         </div>
       </footer>
     </main>
