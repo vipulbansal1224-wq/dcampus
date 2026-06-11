@@ -58,10 +58,16 @@ export default function RootLayout({
               <Link href="/courses" className="hover:text-[#ff6b00] transition-colors">Courses</Link>
               <Link href="/certificate_verification" className="hover:text-[#ff6b00] transition-colors">Certificate Verification</Link>
               <Link href="/events" className="hover:text-[#ff6b00] transition-colors">Events</Link>
-              <Link href="/birthdays" className="hover:text-[#ff6b00] transition-colors">Birthday's</Link>
-              <Link href="/student-of-the-week" className="hover:text-[#ff6b00] transition-colors">Student of the Week</Link>
+              <div className="relative group">
+                <Link href="/todays-special" className="hover:text-[#ff6b00] transition-colors pb-4">
+                  Today's Special
+                </Link>
+                <div className="absolute top-full left-0 mt-0 w-56 bg-white shadow-lg border border-slate-100 rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 flex flex-col pt-2 pb-2">
+                  <Link href="/birthdays" className="px-4 py-2 hover:bg-slate-50 hover:text-[#ff6b00] transition-colors text-sm font-medium">Birthday's</Link>
+                  <Link href="/student-of-the-week" className="px-4 py-2 hover:bg-slate-50 hover:text-[#ff6b00] transition-colors text-sm font-medium">Student of the Week</Link>
+                </div>
+              </div>
               <Link href="/newsroom" className="hover:text-[#ff6b00] transition-colors">Newsroom</Link>
-              <Link href="/todays-special" className="hover:text-[#ff6b00] transition-colors">Today's Special</Link>
               <Link href="/contact" className="hover:text-[#ff6b00] transition-colors">Contact</Link>
             </div>
           </div>
