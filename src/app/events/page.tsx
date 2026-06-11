@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 
 export default function EventsPage() {
   const galleryImages = [
@@ -44,7 +44,7 @@ export default function EventsPage() {
               <div key={index} className="relative h-48 md:h-64 rounded-lg overflow-hidden group shadow-sm hover:shadow-md transition-all">
                 <Image 
                   src={src} 
-                  alt={"Event Image } 
+                  alt={`Event Image ${index + 1}`} 
                   fill 
                   className="object-cover group-hover:scale-105 transition-transform duration-300" 
                 />
