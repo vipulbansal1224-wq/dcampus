@@ -170,7 +170,7 @@ export default function Home() {
             <Image src="/divider-icon-2-300x86.png" alt="Divider" width={200} height={57} className="mx-auto" />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[/comp-1-1024x768.jpeg, /comp-2-1024x768.jpeg, /comp-3-1024x768.jpeg, /comp-4-1024x768.jpeg].map((src, i) => (
+            {["/comp-1-1024x768.jpeg", "/comp-2-1024x768.jpeg", "/comp-3-1024x768.jpeg", "/comp-4-1024x768.jpeg"].map((src, i) => (
               <div key={i} className="relative h-48 rounded overflow-hidden shadow-sm">
                 <Image src={src} alt="Gallery" fill className="object-cover hover:scale-110 transition-transform duration-500" />
               </div>
@@ -196,9 +196,10 @@ export default function Home() {
           </div>
         </div>
         <div className="text-center text-sm border-t border-slate-700 pt-6">
-          <p>Copyright © 2026 Dawn Computer Campus</p>
+          <p>Copyright Â© 2026 Dawn Computer Campus</p>
         </div>
       </footer>
     </main>
   );
 }
+
