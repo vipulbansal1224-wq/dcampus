@@ -1,46 +1,190 @@
-﻿import Image from "next/image";
+﻿"use client";
+
+import Image from "next/image";
+import { useState } from "react";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
+  };
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-slate-50">
       <div className="w-full h-64 md:h-96 relative">
         <Image src="/contact-us-scaled.jpg" alt="Contact Us" fill className="object-cover" />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <h1 className="text-5xl font-bold text-white tracking-wider">CONTACT US</h1>
         </div>
       </div>
+      
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="bg-white p-8 shadow rounded-lg border-t-4 border-[#ff6b00]">
-            <h2 className="text-2xl font-bold text-[#182B45] mb-6">Get in Touch</h2>
-            <div className="space-y-6 text-slate-700">
-              <p className="flex items-start gap-4">
-                <span className="text-2xl">📍</span>
-                <span><strong>Head Office:</strong> Office Number 3, Opp. Gurdwara Sahib, Near Govt Primary School, Bhamian Road, Ludhiana</span>
-              </p>
-              <p className="flex items-start gap-4">
-                <span className="text-2xl">📍</span>
-                <span><strong>Campus 2:</strong> Near Mehandi Palace, Opp. St. Marry Convent School, Tajpur Road, Ludhiana</span>
-              </p>
-              <p className="flex items-start gap-4">
-                <span className="text-2xl">📍</span>
-                <span><strong>B.O. Office:</strong> Number 10, Sukhmani Tower, Kochar Market, Ludhiana</span>
-              </p>
-              <p className="flex items-center gap-4">
-                <span className="text-2xl">📞</span>
-                <span><strong>Phone:</strong> 6283715438</span>
-              </p>
-              <p className="flex items-center gap-4">
-                <span className="text-2xl">✉️</span>
-                <span><strong>Email:</strong> rahul.ketan.rk@gmail.com</span>
+        
+        {/* Animated Branches Section */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-[#182B45] mb-10 text-center">Our Branches</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            {/* Head Office */}
+            <div className="bg-white p-8 rounded-xl shadow-md border-t-4 border-[#ff6b00] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 cursor-pointer group">
+              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <span className="text-2xl">🏢</span>
+              </div>
+              <h3 className="text-xl font-bold text-[#182B45] mb-4">Head Office</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Office Number 3, Opp. Gurdwara Sahib, Near Govt Primary School, Bhamian Road, Ludhiana
               </p>
             </div>
+
+            {/* Campus 2 */}
+            <div className="bg-white p-8 rounded-xl shadow-md border-t-4 border-[#182B45] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 cursor-pointer group">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <span className="text-2xl">🏫</span>
+              </div>
+              <h3 className="text-xl font-bold text-[#182B45] mb-4">Campus 2</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Near Mehandi Palace, Opp. St. Marry Convent School, Tajpur Road, Ludhiana
+              </p>
+            </div>
+
+            {/* B.O. Office */}
+            <div className="bg-white p-8 rounded-xl shadow-md border-t-4 border-[#ff6b00] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 cursor-pointer group">
+              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <span className="text-2xl">📍</span>
+              </div>
+              <h3 className="text-xl font-bold text-[#182B45] mb-4">B.O. Office</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Number 10, Sukhmani Tower, Kochar Market, Ludhiana
+              </p>
+            </div>
+
           </div>
-          <div className="bg-slate-50 p-8 shadow-inner rounded-lg flex flex-col justify-center items-center text-center">
-            <h3 className="text-xl font-bold text-slate-600 mb-4">Send us a Message</h3>
-            <p className="text-slate-500 mb-6">For any inquiries, admissions, or questions regarding our courses, feel free to contact our support team at the numbers provided.</p>
-            <a href="tel:6283715438" className="bg-[#182B45] text-white px-8 py-3 rounded font-bold hover:bg-[#0f1b2b] transition-colors">Call Now</a>
+        </div>
+
+        {/* Enquiry Form Section */}
+        <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+          
+          {/* Contact Info Sidebar */}
+          <div className="bg-[#182B45] text-white p-12 md:w-1/3 flex flex-col justify-center">
+            <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
+            <p className="text-blue-100 mb-12">For any inquiries, admissions, or questions regarding our courses, feel free to contact our support team.</p>
+            
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">📞</div>
+                <div>
+                  <p className="text-sm text-blue-200">Call Us</p>
+                  <p className="font-bold">6283715438</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">✉️</div>
+                <div>
+                  <p className="text-sm text-blue-200">Email Us</p>
+                  <p className="font-bold">rahul.ketan.rk@gmail.com</p>
+                </div>
+              </div>
+            </div>
           </div>
+
+          {/* Form Area */}
+          <div className="p-12 md:w-2/3">
+            <h3 className="text-2xl font-bold text-slate-800 mb-6">Send an Enquiry</h3>
+            
+            {status === 'success' && (
+              <div className="bg-green-50 border border-green-200 text-green-700 px-6 py-4 rounded-lg mb-6 flex items-center gap-3">
+                <span className="text-xl">✅</span> 
+                <p><strong>Message Sent!</strong> We will get back to you shortly.</p>
+              </div>
+            )}
+
+            {status === 'error' && (
+              <div className="bg-red-50 border border-red-200 text-red-700 px-6 py-4 rounded-lg mb-6 flex items-center gap-3">
+                <span className="text-xl">❌</span> 
+                <p><strong>Oops!</strong> Something went wrong. Please try again later.</p>
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-2">Full Name</label>
+                  <input 
+                    type="text" 
+                    required 
+                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-[#ff6b00] focus:border-transparent outline-none transition-all"
+                    placeholder="John Doe"
+                    value={formData.name}
+                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
+                  <input 
+                    type="email" 
+                    required 
+                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-[#ff6b00] focus:border-transparent outline-none transition-all"
+                    placeholder="john@example.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Phone Number</label>
+                <input 
+                  type="tel" 
+                  required 
+                  className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-[#ff6b00] focus:border-transparent outline-none transition-all"
+                  placeholder="+91 XXXXX XXXXX"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Your Message</label>
+                <textarea 
+                  required 
+                  rows={4}
+                  className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-[#ff6b00] focus:border-transparent outline-none transition-all resize-none"
+                  placeholder="How can we help you?"
+                  value={formData.message}
+                  onChange={(e) => setFormData({...formData, message: e.target.value})}
+                ></textarea>
+              </div>
+
+              <button 
+                type="submit" 
+                disabled={status === 'loading'}
+                className="w-full bg-[#ff6b00] text-white font-bold py-4 rounded-lg hover:bg-orange-600 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+              >
+                {status === 'loading' ? 'Sending Message...' : 'Submit Enquiry'}
+              </button>
+            </form>
+          </div>
+
         </div>
       </div>
     </div>
