@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 
 export default function NewsroomPage() {
   const articles = [
@@ -31,7 +31,7 @@ export default function NewsroomPage() {
               <div key={index} className="relative h-[400px] rounded-lg overflow-hidden border border-slate-200 shadow-sm group hover:shadow-xl transition-all">
                 <Image 
                   src={src} 
-                  alt={"Published Article } 
+                  alt={`Published Article ${index + 1}`} 
                   fill 
                   className="object-cover md:object-contain group-hover:scale-105 transition-transform duration-500" 
                 />
