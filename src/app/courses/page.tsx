@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -160,9 +160,9 @@ export default function CoursesPage() {
               <div className="p-8 flex flex-col items-center justify-center text-center">
                 <h3 className="text-2xl font-bold text-[#ff6b00] mb-4 uppercase">What is Time Management</h3>
                 <p className="text-slate-300 mb-6 max-w-2xl">Learn how to effectively manage your time and increase productivity in your professional career. Proper time management is the key to success.</p>
-                <button className="bg-[#182B45] border border-[#ff6b00] text-[#ff6b00] px-8 py-3 rounded-full font-bold hover:bg-[#ff6b00] hover:text-white transition-colors">
+                <a href="/DCC-time-management-1.pdf" target="_blank" rel="noopener noreferrer" className="bg-[#182B45] border border-[#ff6b00] text-[#ff6b00] px-8 py-3 rounded-full font-bold hover:bg-[#ff6b00] hover:text-white transition-colors inline-block">
                   Click Here
-                </button>
+                </a>
               </div>
             </div>
 
