@@ -33,7 +33,7 @@ export default function ImageSlider() {
             src={src}
             alt={`Slide ${index + 1}`}
             fill
-            className="object-cover md:object-contain"
+            className="object-fill"
             priority={index === 0}
           />
         </div>

@@ -77,23 +77,57 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
 
         {/* Footer */}
-        <footer className="bg-[#182B45] text-slate-300 py-12 mt-auto">
-          <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className="text-lg font-bold text-white mb-4">Head Office</h3>
-              <p className="text-sm">Office Number 3, Opp. Gurdwara Sahib,<br/>Near Govt Primary School, Bhamian Road, Ludhiana</p>
+        <footer className="bg-[#182B45] text-slate-300 py-16 mt-auto">
+          <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            
+            <div className="md:col-span-1">
+              <h3 className="text-xl font-bold text-white mb-6">About</h3>
+              <p className="text-sm leading-relaxed mb-6">
+                Dawn Computer Campus or DCC, is a concept which is purely based upon a quality generation approach "DAWN" which refers to a period of early morning which represent a new beginning and a fresh approach.
+              </p>
+              <div className="flex gap-4">
+                <Link href="https://www.facebook.com/rahul.ketan?mibextid=ZbWKwL" target="_blank" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff6b00] transition-colors text-white">f</Link>
+                <Link href="https://www.instagram.com/dcc_gopal/" target="_blank" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff6b00] transition-colors text-white">in</Link>
+              </div>
             </div>
-            <div>
-              <h3 className="text-lg font-bold text-white mb-4">Campus 2</h3>
-              <p className="text-sm">Near Mehandi Palace, Opp. St. Marry Convent School,<br/>Tajpur Road, Ludhiana</p>
+
+            <div className="md:col-span-1">
+              <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>
+              <ul className="space-y-3 text-sm">
+                <li><Link href="/" className="hover:text-[#ff6b00] transition-colors">Home</Link></li>
+                <li><Link href="/courses" className="hover:text-[#ff6b00] transition-colors">Courses</Link></li>
+                <li><Link href="/events" className="hover:text-[#ff6b00] transition-colors">Events</Link></li>
+                <li><Link href="/newsroom" className="hover:text-[#ff6b00] transition-colors">Newsroom</Link></li>
+                <li><Link href="/contact" className="hover:text-[#ff6b00] transition-colors">Contact</Link></li>
+              </ul>
             </div>
-            <div>
-              <h3 className="text-lg font-bold text-white mb-4">Branch Office</h3>
-              <p className="text-sm">Office Number 10, Sukhmani Tower,<br/>Kochar Market, Ludhiana</p>
+
+            <div className="md:col-span-2">
+              <h3 className="text-xl font-bold text-white mb-6">Contacts</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
+                <div>
+                  <h4 className="font-bold text-[#ff6b00] mb-2">Head Office</h4>
+                  <p className="leading-relaxed">Office Number 3, Opp. Gurdwara Sahib,<br/>Near Govt Primary School, Bhamian Road, Ludhiana</p>
+                </div>
+                <div>
+                  <h4 className="font-bold text-[#ff6b00] mb-2">Campus 2</h4>
+                  <p className="leading-relaxed">Near Mehandi Palace, Opp. St. Marry Convent School,<br/>Tajpur Road, Ludhiana</p>
+                </div>
+                <div>
+                  <h4 className="font-bold text-[#ff6b00] mb-2">Branch Office</h4>
+                  <p className="leading-relaxed">Office Number 10, Sukhmani Tower,<br/>Kochar Market, Ludhiana</p>
+                </div>
+                <div>
+                  <h4 className="font-bold text-[#ff6b00] mb-2">Contact Info</h4>
+                  <p className="mb-1">Phone: 6283715438</p>
+                  <p>Email: rahul.ketan.rk@gmail.com</p>
+                </div>
+              </div>
             </div>
+
           </div>
-          <div className="text-center text-sm border-t border-slate-700 pt-6">
-            <p>Copyright © 2026 Dawn Computer Campus</p>
+          <div className="text-center text-sm border-t border-slate-700 pt-8 max-w-7xl mx-auto px-4">
+            <p>Copyright © 2026 Dawn Computer Campus. All Rights Reserved.</p>
           </div>
         </footer>
       </body>
