@@ -40,42 +40,72 @@ export default function ContactPage() {
       
       <div className="max-w-7xl mx-auto px-4 py-16">
         
-        {/* Animated Branches Section */}
+        {/* Animated Branches Section with Maps */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-[#182B45] mb-10 text-center">Our Branches</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {/* Head Office */}
-            <div className="bg-white p-8 rounded-xl shadow-md border-t-4 border-[#ff6b00] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 cursor-pointer group">
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div className="bg-white p-6 rounded-xl shadow-md border-t-4 border-[#ff6b00] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group flex flex-col">
+              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <span className="text-2xl">🏢</span>
               </div>
-              <h3 className="text-xl font-bold text-[#182B45] mb-4">Head Office</h3>
-              <p className="text-slate-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-[#182B45] mb-2">Head Office</h3>
+              <p className="text-slate-600 leading-relaxed text-sm mb-6 flex-grow">
                 Office Number 3, Opp. Gurdwara Sahib, Near Govt Primary School, Bhamian Road, Ludhiana
               </p>
+              <div className="w-full h-48 rounded-lg overflow-hidden border border-slate-200">
+                <iframe 
+                  src="https://maps.google.com/maps?q=Opp.%20Gurdwara%2C%20Near%20Govt.%20Primary%20School%2C%20Bhamian%20Road%2C%20LDH&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={false} 
+                  loading="lazy"
+                ></iframe>
+              </div>
             </div>
 
             {/* Campus 2 */}
-            <div className="bg-white p-8 rounded-xl shadow-md border-t-4 border-[#182B45] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 cursor-pointer group">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div className="bg-white p-6 rounded-xl shadow-md border-t-4 border-[#182B45] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group flex flex-col">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <span className="text-2xl">🏫</span>
               </div>
-              <h3 className="text-xl font-bold text-[#182B45] mb-4">Campus 2</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Near Mehandi Palace, Opp. St. Marry Convent School, Tajpur Road, Ludhiana
+              <h3 className="text-xl font-bold text-[#182B45] mb-2">Campus 2</h3>
+              <p className="text-slate-600 leading-relaxed text-sm mb-6 flex-grow">
+                DAWN COMPUTER CAMPUS, Gobind Nagar Ghai Market, Jamalpur, LDH
               </p>
+              <div className="w-full h-48 rounded-lg overflow-hidden border border-slate-200">
+                <iframe 
+                  src="https://maps.google.com/maps?q=DAWN%20COMPUTER%20CAMPUS%2C%20Gobind%20Nagar%20Ghai%20Market%2C%20Jamalpur%2C%20LDH&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={false} 
+                  loading="lazy"
+                ></iframe>
+              </div>
             </div>
 
             {/* B.O. Office */}
-            <div className="bg-white p-8 rounded-xl shadow-md border-t-4 border-[#ff6b00] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 cursor-pointer group">
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div className="bg-white p-6 rounded-xl shadow-md border-t-4 border-[#ff6b00] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group flex flex-col">
+              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <span className="text-2xl">📍</span>
               </div>
-              <h3 className="text-xl font-bold text-[#182B45] mb-4">B.O. Office</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Number 10, Sukhmani Tower, Kochar Market, Ludhiana
+              <h3 className="text-xl font-bold text-[#182B45] mb-2">B.O. Office</h3>
+              <p className="text-slate-600 leading-relaxed text-sm mb-6 flex-grow">
+                Office No.10, Sukhmani Tower, Kochar Market, LDH
               </p>
+              <div className="w-full h-48 rounded-lg overflow-hidden border border-slate-200">
+                <iframe 
+                  src="https://maps.google.com/maps?q=Office%20No.10%2C%20Sukhmani%20Tower%2C%20Kochar%20Market%2C%20LDH&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={false} 
+                  loading="lazy"
+                ></iframe>
+              </div>
             </div>
 
           </div>
