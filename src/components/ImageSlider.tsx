@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -25,11 +25,13 @@ export default function ImageSlider() {
       {images.map((src, index) => (
         <div
           key={index}
-          className={\bsolute inset-0 transition-opacity duration-1000 ease-in-out \\}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+          }`}
         >
           <Image
             src={src}
-            alt={\Slide \\}
+            alt={`Slide ${index + 1}`}
             fill
             className="object-cover md:object-contain"
             priority={index === 0}
@@ -43,8 +45,10 @@ export default function ImageSlider() {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={\w-3 h-3 rounded-full transition-all \\}
-            aria-label={\Go to slide \\}
+            className={`w-3 h-3 rounded-full transition-all ${
+              index === currentIndex ? "bg-[#ff6b00] scale-125" : "bg-white/50 hover:bg-white"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
