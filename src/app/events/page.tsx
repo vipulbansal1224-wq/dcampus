@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 export default function EventsPage() {
   const galleryImages = [
@@ -29,8 +29,8 @@ export default function EventsPage() {
       <div className="max-w-7xl mx-auto px-4 py-16 space-y-16">
         
         {/* Cultural Activities */}
-        <div className="bg-white p-8 md:p-12 shadow rounded-lg border-t-4 border-[#ff6b00]">
-          <h2 className="text-3xl font-bold text-[#182B45] mb-6">Cultural Activities</h2>
+        <div className="bg-white p-8 md:p-12 shadow rounded-lg border-t-4 border-secondary">
+          <h2 className="text-3xl font-bold text-primary mb-6">Cultural Activities</h2>
           <p className="text-slate-700 leading-relaxed text-lg">
             Cultural activities are sports or activities which contribute to or enhance the historical or social development, appreciation of members of the public. It is training and refinement of the intellect, interest, tastes and skills of a person. At Dawn Computer Campus, we believe in the holistic development of our students by regularly organizing such events.
           </p>
@@ -38,7 +38,7 @@ export default function EventsPage() {
 
         {/* Event Gallery */}
         <div className="bg-white p-8 md:p-12 shadow rounded-lg">
-          <h2 className="text-3xl font-bold text-[#182B45] mb-8 text-center">Event Gallery</h2>
+          <h2 className="text-3xl font-bold text-primary mb-8 text-center">Event Gallery</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {galleryImages.map((src, index) => (
               <div key={index} className="relative h-48 md:h-64 rounded-lg overflow-hidden group shadow-sm hover:shadow-md transition-all">
@@ -62,8 +62,8 @@ export default function EventsPage() {
               <Image src="/vision.jpg" alt="Vision" fill className="object-cover" />
             </div>
             <div className="p-6 flex flex-col flex-grow text-center">
-              <h3 className="text-2xl font-bold text-[#182B45] mb-4 uppercase">Vision</h3>
-              <p className="text-slate-600 text-sm italic border-l-4 border-[#ff6b00] pl-4 text-left">
+              <h3 className="text-2xl font-bold text-primary mb-4 uppercase">Vision</h3>
+              <p className="text-slate-600 text-sm italic border-l-4 border-secondary pl-4 text-left">
                 "Everyone here has the sense that right now is one of those moments when we are informing the Future" <br/><br/>
                 <span className="font-bold">- Sir Steve Jobs.</span> <br/><br/>
                 Inspired by these words from Sir Steve Jobs, we think this is the right time to be digitized, we are now in a Digital World & our Future will be surrounded by digits. To live in this digital world we have to gain knowledge in Computer.
@@ -77,7 +77,7 @@ export default function EventsPage() {
               <Image src="/mission.jpg" alt="Mission" fill className="object-cover" />
             </div>
             <div className="p-6 flex flex-col flex-grow text-center">
-              <h3 className="text-2xl font-bold text-[#182B45] mb-4 uppercase">Mission</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4 uppercase">Mission</h3>
               <p className="text-slate-600 text-sm">
                 We want to provide the Best Education and Learning Experience to our students so that a student can give a major step towards future.
               </p>
@@ -90,7 +90,7 @@ export default function EventsPage() {
               <Image src="/comit.jpg" alt="Commitment" fill className="object-cover" />
             </div>
             <div className="p-6 flex flex-col flex-grow text-center">
-              <h3 className="text-2xl font-bold text-[#182B45] mb-4 uppercase">Commitments</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4 uppercase">Commitments</h3>
               <ul className="list-disc list-inside space-y-2 text-slate-600 text-sm text-left">
                 <li>DCC is Providing Computer Education since 2008.</li>
                 <li>Students are trained here by the experienced teachers.</li>
@@ -106,36 +106,36 @@ export default function EventsPage() {
 
         {/* Why Join DCC */}
         <div className="bg-white p-8 md:p-12 shadow rounded-lg">
-          <h2 className="text-3xl font-bold text-[#182B45] mb-8 text-center">Why to Join DCC ?</h2>
+          <h2 className="text-3xl font-bold text-primary mb-8 text-center">Why to Join DCC ?</h2>
           <p className="mb-6 font-semibold text-slate-700 text-center">A.: Now, it's a valuable and worthy question that why anyone should join DCC, so the answer is as following:</p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-600">
             <div className="flex gap-4 items-start bg-slate-50 p-4 rounded border border-slate-100">
-              <span className="text-[#ff6b00] text-2xl">✓</span>
+              <span className="text-secondary text-2xl">âœ“</span>
               <p>We are here to upgrade the education level and education pattern.</p>
             </div>
             <div className="flex gap-4 items-start bg-slate-50 p-4 rounded border border-slate-100">
-              <span className="text-[#ff6b00] text-2xl">✓</span>
+              <span className="text-secondary text-2xl">âœ“</span>
               <p>Make the students capable on actual platform of grabbing practical knowledge along with assignment work.</p>
             </div>
             <div className="flex gap-4 items-start bg-slate-50 p-4 rounded border border-slate-100">
-              <span className="text-[#ff6b00] text-2xl">✓</span>
+              <span className="text-secondary text-2xl">âœ“</span>
               <p>ISO 9001:2015 certification, so that student can put considerable value to their CV on ground of Technical and additional qualification.</p>
             </div>
             <div className="flex gap-4 items-start bg-slate-50 p-4 rounded border border-slate-100">
-              <span className="text-[#ff6b00] text-2xl">✓</span>
+              <span className="text-secondary text-2xl">âœ“</span>
               <p>Information of every student will be displayed on our website and certificates and Diploma will be valid in Public and Private Section.</p>
             </div>
             <div className="flex gap-4 items-start bg-slate-50 p-4 rounded border border-slate-100">
-              <span className="text-[#ff6b00] text-2xl">✓</span>
+              <span className="text-secondary text-2xl">âœ“</span>
               <p>Not only computer education will be imported but also general awareness, regular seminars, exposure to practical working condition, educational trips.</p>
             </div>
             <div className="flex gap-4 items-start bg-slate-50 p-4 rounded border border-slate-100">
-              <span className="text-[#ff6b00] text-2xl">✓</span>
+              <span className="text-secondary text-2xl">âœ“</span>
               <p>Those who wants to go abroad, we are here to give them genuine guidance and path to their desired destination.</p>
             </div>
             <div className="flex gap-4 items-start bg-slate-50 p-4 rounded border border-slate-100 md:col-span-2">
-              <span className="text-[#ff6b00] text-2xl">✓</span>
+              <span className="text-secondary text-2xl">âœ“</span>
               <p>The top most requirements now a days is 'Job' and we assure you that we will provide you a suitable job, as per students personal skills, capability, that too without any full month or half month charges.</p>
             </div>
           </div>

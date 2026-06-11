@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
 :root {
+  /* Default Colors */
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #182B45;
+  --secondary: #ff6b00;
+}
+
+/* Theme 1: Dark Mode */
+[data-theme='dark'] {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --primary: #1e293b;
+  --secondary: #38bdf8;
+}
+
+/* Theme 2: Nature (Green/Yellow) */
+[data-theme='nature'] {
+  --background: #f0fdf4;
+  --foreground: #064e3b;
+  --primary: #14532d;
+  --secondary: #eab308;
+}
+
+/* Theme 3: Ocean (Teal/Blue) */
+[data-theme='ocean'] {
+  --background: #f0f9ff;
+  --foreground: #082f49;
+  --primary: #0369a1;
+  --secondary: #0ea5e9;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  /* The font family is dynamically overridden by Context if needed */
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Font classes */
+[data-font='serif'] body {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+[data-font='mono'] body {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+[data-font='sans'] body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+[data-layout='boxed'] body {
+  max-width: 1280px;
+  margin: 0 auto;
+  box-shadow: 0 0 40px rgba(0,0,0,0.1);
+  border-left: 1px solid var(--primary);
+  border-right: 1px solid var(--primary);
 }

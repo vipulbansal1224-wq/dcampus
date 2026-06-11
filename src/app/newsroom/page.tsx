@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 export default function NewsroomPage() {
   const articles = [
@@ -24,7 +24,7 @@ export default function NewsroomPage() {
       <div className="max-w-7xl mx-auto px-4 py-16">
         
         <div className="bg-white p-8 md:p-12 shadow rounded-lg">
-          <h2 className="text-3xl font-bold text-[#182B45] mb-12 text-center border-b pb-4">Our Published Articles</h2>
+          <h2 className="text-3xl font-bold text-primary mb-12 text-center border-b pb-4">Our Published Articles</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((src, index) => (
