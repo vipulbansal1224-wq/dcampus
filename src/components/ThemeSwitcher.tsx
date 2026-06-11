@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from 'react';
 import { useThemeContext } from '@/context/ThemeContext';
@@ -34,19 +34,19 @@ export default function ThemeSwitcher() {
             <div>
               <h4 className="text-sm font-bold text-slate-700 mb-3">Color Theme</h4>
               <div className="grid grid-cols-2 gap-2">
-                <button onClick={() => setTheme('default')} className={\py-2 px-3 text-xs rounded border \\}>
+                <button onClick={() => setTheme('default')} className={`py-2 px-3 text-xs rounded border ${theme === 'default' ? 'border-primary bg-primary/10 font-bold' : 'border-slate-200 hover:bg-slate-50'}`}>
                   <div className="flex gap-1 justify-center mb-1"><div className="w-3 h-3 rounded-full bg-[#182B45]"></div><div className="w-3 h-3 rounded-full bg-[#ff6b00]"></div></div>
                   Default
                 </button>
-                <button onClick={() => setTheme('dark')} className={\py-2 px-3 text-xs rounded border \\}>
+                <button onClick={() => setTheme('dark')} className={`py-2 px-3 text-xs rounded border ${theme === 'dark' ? 'border-primary bg-primary/10 font-bold' : 'border-slate-200 hover:bg-slate-50'}`}>
                   <div className="flex gap-1 justify-center mb-1"><div className="w-3 h-3 rounded-full bg-[#0f172a]"></div><div className="w-3 h-3 rounded-full bg-[#38bdf8]"></div></div>
                   Dark
                 </button>
-                <button onClick={() => setTheme('nature')} className={\py-2 px-3 text-xs rounded border \\}>
+                <button onClick={() => setTheme('nature')} className={`py-2 px-3 text-xs rounded border ${theme === 'nature' ? 'border-primary bg-primary/10 font-bold' : 'border-slate-200 hover:bg-slate-50'}`}>
                   <div className="flex gap-1 justify-center mb-1"><div className="w-3 h-3 rounded-full bg-[#14532d]"></div><div className="w-3 h-3 rounded-full bg-[#eab308]"></div></div>
                   Nature
                 </button>
-                <button onClick={() => setTheme('ocean')} className={\py-2 px-3 text-xs rounded border \\}>
+                <button onClick={() => setTheme('ocean')} className={`py-2 px-3 text-xs rounded border ${theme === 'ocean' ? 'border-primary bg-primary/10 font-bold' : 'border-slate-200 hover:bg-slate-50'}`}>
                   <div className="flex gap-1 justify-center mb-1"><div className="w-3 h-3 rounded-full bg-[#0369a1]"></div><div className="w-3 h-3 rounded-full bg-[#0ea5e9]"></div></div>
                   Ocean
                 </button>
@@ -57,13 +57,13 @@ export default function ThemeSwitcher() {
             <div>
               <h4 className="text-sm font-bold text-slate-700 mb-3">Typography</h4>
               <div className="flex flex-col gap-2">
-                <button onClick={() => setFont('sans')} className={\py-2 px-3 text-sm rounded border text-left \\} style={{fontFamily: 'Arial, sans-serif'}}>
+                <button onClick={() => setFont('sans')} className={`py-2 px-3 text-sm rounded border text-left ${font === 'sans' ? 'border-primary bg-primary/10 font-bold' : 'border-slate-200 hover:bg-slate-50'}`} style={{fontFamily: 'Arial, sans-serif'}}>
                   Sans Serif (Default)
                 </button>
-                <button onClick={() => setFont('serif')} className={\py-2 px-3 text-sm rounded border text-left \\} style={{fontFamily: 'Georgia, serif'}}>
+                <button onClick={() => setFont('serif')} className={`py-2 px-3 text-sm rounded border text-left ${font === 'serif' ? 'border-primary bg-primary/10 font-bold' : 'border-slate-200 hover:bg-slate-50'}`} style={{fontFamily: 'Georgia, serif'}}>
                   Serif (Classic)
                 </button>
-                <button onClick={() => setFont('mono')} className={\py-2 px-3 text-sm rounded border text-left \\} style={{fontFamily: 'monospace'}}>
+                <button onClick={() => setFont('mono')} className={`py-2 px-3 text-sm rounded border text-left ${font === 'mono' ? 'border-primary bg-primary/10 font-bold' : 'border-slate-200 hover:bg-slate-50'}`} style={{fontFamily: 'monospace'}}>
                   Monospace (Code)
                 </button>
               </div>
@@ -73,11 +73,11 @@ export default function ThemeSwitcher() {
             <div>
               <h4 className="text-sm font-bold text-slate-700 mb-3">Layout Style</h4>
               <div className="grid grid-cols-2 gap-2">
-                <button onClick={() => setLayout('wide')} className={\py-2 px-3 text-xs rounded border \\}>
+                <button onClick={() => setLayout('wide')} className={`py-2 px-3 text-xs rounded border ${layout === 'wide' ? 'border-primary bg-primary/10 font-bold' : 'border-slate-200 hover:bg-slate-50'}`}>
                   <div className="w-full h-8 bg-slate-200 mb-1 rounded flex items-center justify-center"><div className="w-full h-full border-x-4 border-slate-300"></div></div>
                   Wide (Default)
                 </button>
-                <button onClick={() => setLayout('boxed')} className={\py-2 px-3 text-xs rounded border \\}>
+                <button onClick={() => setLayout('boxed')} className={`py-2 px-3 text-xs rounded border ${layout === 'boxed' ? 'border-primary bg-primary/10 font-bold' : 'border-slate-200 hover:bg-slate-50'}`}>
                   <div className="w-full h-8 bg-slate-200 mb-1 rounded flex items-center justify-center"><div className="w-2/3 h-full bg-white shadow-sm"></div></div>
                   Boxed
                 </button>
